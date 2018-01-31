@@ -1,4 +1,4 @@
-import { Http,Headers } from '@angular/http';
+import { Http, Headers } from '@angular/http';
 import { Injectable } from '@angular/core';
 // import { RequestOptions, URLSearchParams } from '@angular/http';
 
@@ -35,32 +35,48 @@ export class UserProvider {
   eventSubmit(data) {
     let headers = new Headers();
     let tokenValue = 'Bearer ' + this.token;
-    headers.append('Content-Type', 'application/json');  
-    headers.append('Authorization',tokenValue); 
-    return this.http.post('http://localhost:3000/events/'+this.userId,data,{headers: headers}).toPromise();
-  }
-   
-  consequenceSubmit(data){
-  let headers = new Headers();
-  let tokenValue = 'Bearer ' + this.token;
-  headers.append('Content-Type', 'application/json');  
-  headers.append('Authorization',tokenValue); 
-  return this.http.post('http://localhost:3000/consequences/'+this.userId,data,{headers: headers}).toPromise();
+    headers.append('Content-Type', 'application/json');
+    headers.append('Authorization', tokenValue);
+    return this.http.post('http://localhost:3000/events/' + this.userId, data, { headers: headers }).toPromise();
   }
 
-  beliefSubmit(data){
+  consequenceSubmit(data) {
     let headers = new Headers();
     let tokenValue = 'Bearer ' + this.token;
-    headers.append('Content-Type', 'application/json');  
-    headers.append('Authorization',tokenValue); 
-    return this.http.post('http://localhost:3000/beliefs/'+this.userId,data,{headers: headers}).toPromise();
-    }
+    headers.append('Content-Type', 'application/json');
+    headers.append('Authorization', tokenValue);
+    return this.http.post('http://localhost:3000/consequences/' + this.userId, data, { headers: headers }).toPromise();
+  }
 
-  disputeSubmit(data){
+  beliefSubmit(data) {
     let headers = new Headers();
     let tokenValue = 'Bearer ' + this.token;
-    headers.append('Content-Type', 'application/json');  
-    headers.append('Authorization',tokenValue); 
-    return this.http.post('http://localhost:3000/disputes/'+this.userId,data,{headers: headers}).toPromise();
+    headers.append('Content-Type', 'application/json');
+    headers.append('Authorization', tokenValue);
+    return this.http.post('http://localhost:3000/beliefs/' + this.userId, data, { headers: headers }).toPromise();
+  }
+
+  disputeSubmit(data) {
+    let headers = new Headers();
+    let tokenValue = 'Bearer ' + this.token;
+    headers.append('Content-Type', 'application/json');
+    headers.append('Authorization', tokenValue);
+    return this.http.post('http://localhost:3000/disputes/' + this.userId, data, { headers: headers }).toPromise();
+  }
+
+  emotionSubmit(data) {
+    let headers = new Headers();
+    let tokenValue = 'Bearer ' + this.token;
+    headers.append('Content-Type', 'application/json');
+    headers.append('Authorization', tokenValue);
+    return this.http.post('http://localhost:3000/emotions/' + this.userId, data, { headers: headers }).toPromise();
+  }
+
+  feelingSubmit(data) {
+    let headers = new Headers();
+    let tokenValue = 'Bearer ' + this.token;
+    headers.append('Content-Type', 'application/json');
+    headers.append('Authorization', tokenValue);
+    return this.http.post('http://localhost:3000/feelings/' + this.userId, data, { headers: headers }).toPromise();
   }
 }

@@ -13,6 +13,9 @@ import { SignupPage } from '../pages/signup/signup';
 import { ConsequencePage } from '../pages/consequence/consequence';
 import { UserProvider } from '../providers/user/user';
 import { HttpModule }from"@angular/http";
+import { DisputePage } from '../pages/dispute/dispute';
+import { EmotionPage } from '../pages/emotion/emotion';
+import { FeelingPage } from '../pages/feeling/feeling';
 // import { Http } from '@angular/http/src/http';
 
 @NgModule({
@@ -23,7 +26,10 @@ import { HttpModule }from"@angular/http";
     SignupPage,
     EventPage,
     BeliefPage,
-    ConsequencePage
+    ConsequencePage,
+    DisputePage,
+    EmotionPage,
+    FeelingPage
   ],
   imports: [
     BrowserModule,
@@ -38,7 +44,10 @@ import { HttpModule }from"@angular/http";
     SignupPage,
     EventPage,
     BeliefPage,
-    ConsequencePage
+    ConsequencePage,
+    DisputePage,
+    EmotionPage,
+    FeelingPage
   ],
   providers: [
     StatusBar,

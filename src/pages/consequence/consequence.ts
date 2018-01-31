@@ -21,7 +21,7 @@ export class ConsequencePage {
   constructor(public navCtrl: NavController, public navParams: NavParams, public user: UserProvider,
     private formBuilder: FormBuilder) {
       this.userForm = this.formBuilder.group({
-        'event': ['']
+        'consequence': ['']
       });
   }
 

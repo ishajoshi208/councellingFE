@@ -16,14 +16,16 @@
 <ion-content padding>
 
 
-    <h4>Feelings List</h4>
+  <h4>Feelings List</h4>
+  <form [formGroup]="userForm">
     <ion-item>
       <ion-label floating>Feelings</ion-label>
-      <ion-input type="text" name="title"></ion-input>
+      <ion-input type="text" formControlName="feeling" id="feeling"></ion-input>
     </ion-item>
-  
-    <p>
-      <button ion-button (click)="onAddFeelings()">Submit</button>
-    </p>
+  </form>
+
+  <p>
+    <button ion-button (click)="onAddFeelings()">Submit</button>
+  </p>
 
 </ion-content>

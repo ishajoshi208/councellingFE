@@ -1,16 +1,24 @@
 page-login {
     .custom-left{
         float: left;
+        padding-top: 14px;
     };
     .custom-right{
         float: right;
+        padding-top: 24px;
     };
     .custom-login-button{
-        padding-top: 50px;
+        padding-top: 90px;
         text-align: center;
     };
     .custom-newuser{
         padding-top: 50px;
         text-align: center;
     };
+    .form-block{
+        padding-top: 120px;
+    };
+    .checked-button{
+        padding-top: 5px;
+    }
 }

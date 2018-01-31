@@ -48,7 +48,7 @@ export class LoginPage {
     console.log("token",this.token);
     console.log("userid",this.userId);
     if (loginData.status = 200) {
-      this.navCtrl.push(EventPage);
+      this.navCtrl.setRoot(EventPage);
     }
     this.user.dataPassing(this.token,this.userId);
     // 

@@ -16,21 +16,20 @@
 <ion-content padding>
   <h3>Login Here</h3>
   <form [formGroup]="userForm">
-    <ion-list>
+    <div class="form-block">
       <ion-item>
         <ion-label color="primary">Username</ion-label>
-        <ion-input  formControlName="username" id="name"></ion-input>
+        <ion-input formControlName="username" id="name"></ion-input>
       </ion-item>
       <ion-item>
         <ion-label color="primary">Password</ion-label>
-        <ion-input  formControlName="password" id="password"></ion-input>
+        <ion-input formControlName="password" id="password"></ion-input>
       </ion-item>
-    </ion-list>
+    </div>
   </form>
-
   <p>
     <span class="custom-left">Remember Me
-      <ion-checkbox color="dark" checked="true" (ionChange)="datachanged($event)"></ion-checkbox>
+      <ion-checkbox color="dark" class="checked-button" checked="true" (ionChange)="datachanged($event)"></ion-checkbox>
     </span>
     <span class="custom-right">
       <a>Forgot Password?</a>
